@@ -15,4 +15,4 @@ for studentDIR in "${DIRS[@]}"; do
   mkdir /$studentDIR/door
 done
 
-rm -r /root/scenario-dungeon-crawler
+rm -r /tmp/scenario-dungeon-crawler
