@@ -5,7 +5,7 @@ script "setup_dungeon_crawler" do
     code <<-EOH
     cd /tmp
     git clone https://github.com/watsonsl/scenario-dungeon-crawler.git
-    cd /tmp/scenario-dungeon_crawler
+    cd /tmp/scenario-dungeon-crawler
     ./setup
     rm -r /tmp/scenario-dungeon-crawler
     touch /tmp/.installed
