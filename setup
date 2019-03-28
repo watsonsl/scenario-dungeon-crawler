@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# R is for assigning a random number to it
+R=0
+DIRS=()
+for FILE in /home/*; do
+    if [[ -d $FILE ]]; then
+        DIRS+=( "$FILE" )
+        echo $FILE
+    fi
+done
+
+for studentDIR in "${DIRS[@]}"; do
+  # Function to create a random number every time it is called
+  random_Number(){
+      R=$(($RANDOM%999999))
+  }
+
+  # Call the random number function
+  random_Number
+
+  # Making directories and chmoding them for the scenario
+    mkdir -p /$studentDIR/westernDoor/northernDoor/southern\ door/eastern.door/!
+    touch /$studentDIR/westernDoor/northernDoor/southern\ door/eastern.door/!/$R
+    mkdir /$studentDIR/southernDoor
+    chmod -R 777 /$studentDIR/westernDoor/
+    chmod -R 777 /$studentDIR/southernDoor/
+done
+
+rm -r /tmp/scenario-dungeon_crawler
