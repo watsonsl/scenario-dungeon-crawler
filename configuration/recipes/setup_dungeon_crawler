@@ -4,9 +4,10 @@ script "setup_dungeon_crawler" do
   cwd "/tmp"
   code <<-EOH
   cd /tmp
-  wget https://github.com/edurange/scenario-total-recon/raw/master/motd_home -O /etc/motd
+  wget https://raw.githubusercontent.com/watsonsl/scenario-dungeon-crawler/master/motd/motd_home -O /etc/motd
   for each_home in $(ls /home/)
     do cat /etc/motd > /home/$each_home/instructions.txt
+    do mkdir -p /$each_home/westernDoor/northernDoor/southern\ door/eastern.door/!
   done
   EOH
 end

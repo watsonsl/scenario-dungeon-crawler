@@ -20,9 +20,11 @@ for studentDIR in "${DIRS[@]}"; do
   random_Number
 
   # Making directories and chmoding them for the scenario
-    mkdir -p /$studentsDIR/westernDoor/northernDoor/southern\ door/eastern.door/!
-    touch /$studentsDIR/westernDoor/northernDoor/southern\ door/eastern.door/!/$R
-    mkdir /$studentsDIR/southernDoor
-    chmod -R 777 /$studentsDIR/westernDoor/
-    chmod -R 777 /$studentsDIR/southernDoor/
+    mkdir -p /$studentDIR/westernDoor/northernDoor/southern\ door/eastern.door/!
+    touch /$studentDIR/westernDoor/northernDoor/southern\ door/eastern.door/!/$R
+    mkdir /$studentDIR/southernDoor
+    chmod -R 777 /$studentDIR/westernDoor/
+    chmod -R 777 /$studentDIR/southernDoor/
 done
+
+rm -r /root/scenario-dungeon-crawler
