@@ -1,13 +1,12 @@
 script "setup_dungeon_crawler" do
-    interpreter "bash"
-    user "root"
-    cwd "/tmp"
-    code <<-EOH
-    cd /root
-    git clone https://github.com/watsonsl/scenario-dungeon-crawler.git
-    cd scenario-dungeon-crawler
-    ./setup
-    cd /root
-    rm -r scenario-dungeon-crawler
-    EOH
+  interpreter "bash"
+  user "root"
+  cwd "/tmp"
+  code <<-EOH
+  cd /tmp
+  wget https://github.com/edurange/scenario-total-recon/raw/master/motd_home -O /etc/motd
+  for each_home in $(ls /home/)
+    do cat /etc/motd > /home/$each_home/instructions.txt
+  done
+  EOH
 end
