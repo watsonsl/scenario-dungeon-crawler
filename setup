@@ -27,4 +27,4 @@ for studentDIR in "${DIRS[@]}"; do
     chmod -R 777 /$studentDIR/southernDoor/
 done
 
-rm -r /tmp/scenario-dungeon_crawler
+rm -r /tmp/scenario-dungeon-crawler
